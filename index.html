@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Creating Conflicting in css betn id and heading tag</title>
+    <style>
+    h1{
+    color: red;
+    }
+    #foo{
+    color: blue;
+    }
+        ul li {
+        color: red;
+        }
+        a[href="fb.com"] {
+        color: orangered;
+        font-weight: bold;
+        font-size: larger; 
+        }
+        button {
+        background-color:green;
+        font-size: 32px;
+        color: whitesmoke;
+        padding: 5px;
+        }
+            button:hover {
+            color:black;
+            background-color: white;
+            }
+        @media(min-width:600px) {
+            body {
+                background-color: red;
+            }
+        }
+
+        @media(max-width: 599px) {
+            body {
+                background-color: blue;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="foo">Heading Sample 1</h1>
+    <p>
+        Note: Specificity( or precedence in my language):
+        Inline->id->class->type(what type- h1 or ul etc )
+    </p>
+    <br>
+    <h2>Order List with Descendent Selector Example</h2>
+
+    <ol>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+        </ul>
+        <li>List Item 2</li>
+    </ol>
+    <br>
+    <h2>Anchor tag with Attribute Selector Example</h2>
+    <br>
+    <a href="google.com">Google</a><br />
+    <a href="fb.com">Facebook</a><br />
+    <a href="amazon.com">Amazon</a>
+    <h2>Anchor tag with Pseudoclass Selector Example</h2>
+    <br>
+    <button>Click Me</button>
+
+
+</body>
+</html>
